@@ -1,0 +1,32 @@
+import first
+import gleam/expect
+
+pub fn fuel_requirement_test() {
+  12
+  |> first.fuel_requirement
+  |> expect.equal(_, 2)
+
+  12
+  |> first.fuel_requirement
+  |> expect.equal(_, 2)
+
+  1969
+  |> first.fuel_requirement
+  |> expect.equal(_, 654)
+
+  100756
+  |> first.fuel_requirement
+  |> expect.equal(_, 33583)
+}
+
+pub fn parse_input_data_test() {
+  "1\n2\n300"
+  |> first.parse_input_data
+  |> expect.equal(_, Ok([1, 2, 300]))
+}
+
+pub fn ship_fuel_requirement_test() {
+  "81018\n131506\n113595\n116435\n112262\n105203\n124243\n50460\n128837\n84880\n55051\n144516\n121893\n68782\n60052\n78252\n72727\n88175\n131387\n128295\n62168\n93923\n61695\n120376\n76679\n130758\n90425\n133389\n124749\n84461\n96642\n105472\n90380\n67201\n51733\n120042\n77060\n134224\n72075\n118320\n90683\n64965\n57748\n80922\n86415\n59351\n82429\n95558\n58304\n87743\n120890\n120633\n85175\n134512\n93297\n119595\n98336\n111126\n144630\n71403\n100214\n106687\n107887\n115389\n115226\n140780\n61773\n110560\n79832\n85269\n147795\n139965\n95501\n104997\n64204\n69737\n51767\n110469\n81207\n142959\n134885\n123246\n94901\n103215\n137028\n83341\n148460\n67966\n70316\n110290\n135245\n113326\n126060\n100250\n67475\n59091\n141978\n61434\n148481\n114584"
+  |> first.ship_fuel_requirement
+  |> expect.equal(_, Ok(3315383))
+}

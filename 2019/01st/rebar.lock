@@ -1,0 +1,4 @@
+[{<<"gleam_stdlib">>,
+  {git,"https://github.com/gleam-lang/stdlib",
+       {ref,"eef64e6cc28ef4e001818381c317b42095653ff9"}},
+  0}].
